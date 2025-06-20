@@ -1,0 +1,66 @@
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .section-heading {
+    font-size: 60px;
+    font-family: 'Abril Fatface', serif;
+    letter-spacing: 1px;
+    padding: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(2px);
+  }
+  .info-section {
+    background-color: #2c2f91;
+  }
+  .info-title {
+    font-family: 'Abril Fatface', serif;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .info-box {
+    background: #fff;
+    max-width: 1000px;
+    border-radius: 10px;
+  }
+  .info-subtitle {
+    font-size: 22px;
+  }
+  .info-text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .cta-section {
+    background: #1e40af;
+  }
+  .form-section label {
+    font-weight: 600;
+  }
+  
+  .docs-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+  }
+  .docs-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .list-group-item {
+    background-color: transparent;
+    border: none;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+  

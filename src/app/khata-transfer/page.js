@@ -1,10 +1,10 @@
 import React from 'react'
-import { Home } from './Component/Home/Home'
+import Home from '../../Component/BBMP services/KhataTransfer/Home'
 
 const page = () => {
   return (
     <div>
-      <Home/>
+        <Home/>
     </div>
   )
 }

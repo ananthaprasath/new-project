@@ -48,9 +48,9 @@ const LegalOpinionSection = () => {
   return (
     <div className="py-5" style={{ backgroundColor:'#f1f1f1' }}>
       <Container>
-        <h2 className="text-center mb-3" style={{ color: '#0d1b7e' }}>
+        <h2 className="text-center fw-bold mb-3" style={{ color: '#0d1b7e' }}>
           <img
-            src="/images/home/personal_assistance.webp"
+            src="/images/home/pic.jpg"
             alt="icon"
             style={{ width: '70px', marginBottom: '10px' }}
           />
@@ -94,7 +94,7 @@ const LegalOpinionSection = () => {
               href="#contact"
               className="mt-3 border-0"
               style={{
-                background: 'linear-gradient(to right, #4b00e0, #ff416c)',
+                background: 'linear-gradient(to right, #4b00e0,rgb(20, 174, 221))',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '8px',

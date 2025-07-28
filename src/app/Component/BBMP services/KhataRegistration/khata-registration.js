@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './bbmp.css';
+import Contact from './Contect';
 
 const KhataRegistration = () => {
   useEffect(() => {
@@ -11,172 +11,135 @@ const KhataRegistration = () => {
 
   return (
     <>
-      {/* HERO SECTION */}
-      <section className="hero-banner position-relative">
-        <img
-          src="/images/bbmp services/KhataRegistration.jpeg"
-          alt="Khata Registration"
-          className="hero-img w-100"
-        />
-        <div className="hero-overlay position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
-          <h1 className="section-heading text-white text-center" data-aos="fade-down">
-            Khata Registration
-          </h1>
-        </div>
+      {/* HERO / BREADCRUMB */}
+      <section className="hero-crumb">
+      <div className="container text-center" data-aos="fade-down">
+  <h1 className="hero-title fw-bold display-4">
+    Khata Registration
+  </h1>
+</div>
       </section>
 
-      {/* WHAT IS KHATA */}
-      <section className="info-section py-5">
-        <div className="container text-center">
-          <h2 className="info-title text-white mb-4" data-aos="fade-up">Know More About Khata Registration</h2>
-          <div className="card info-box mx-auto p-4 shadow-sm" data-aos="fade-up" data-aos-delay="200">
-            <h3 className="info-subtitle text-primary fw-bold mb-3">What Is Khata</h3>
-            <p className="info-text text-dark m-0">
-              KHATA is a legal document issued by BBMP (Bruhat Bengaluru Mahanagara Palike) to property owners within its limits. 
-              It contains vital information such as owner's name, property dimensions, location, tax details, built-up area, and PID number.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* KHATA TYPES */}
-      <section className="info-section py-5">
-        <div className="container text-center">
-          <h2 className="info-title text-white mb-4" data-aos="fade-up">Khata Types</h2>
-          <div className="card info-box table-responsive mx-auto p-4" data-aos="fade-up" data-aos-delay="200">
-            <table className="table table-bordered">
-              <thead>
-                <tr>
-                  <th><strong>A Khatha</strong></th>
-                  <th><strong>B Khatha</strong></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Legal property</td><td>Illegal/semi-legal</td></tr>
-                <tr><td>BBMP jurisdiction</td><td>Local jurisdiction</td></tr>
-                <tr><td>Ownership transferable</td><td>Ownership not transferable</td></tr>
-                <tr><td>Loans possible</td><td>No loan facility</td></tr>
-                <tr><td>Eligible for licenses</td><td>Not eligible</td></tr>
-                <tr><td>Construction allowed</td><td>Construction not allowed</td></tr>
-                <tr><td>Apply for water & electricity</td><td>Not applicable</td></tr>
-                <tr><td>Resale possible</td><td>Resale restricted</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* CONTENTS OF KHATA */}
-      <section className="info-section py-5">
-        <div className="container text-center">
-          <h2 className="info-title text-white mb-4" data-aos="fade-up">Contents of a Khatha</h2>
-          <div className="card info-box mx-auto p-4" data-aos="fade-up" data-aos-delay="200">
-            <ul className="text-start m-0 p-0 list-unstyled">
-              <li>• Property owner's name</li>
-              <li>• Size and measurements</li>
-              <li>• Property location</li>
-              <li>• Built-up area</li>
-              <li>• Vacant or occupied</li>
-              <li>• Purpose of utilization</li>
-              <li>• Annual value of the property</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="cta-section py-4 text-center bg-primary">
-        <h2 className="info-title text-white mb-0">Book Khata Registration Documents Service Now</h2>
-      </section>
-
-      {/* FORM SECTION */}
-      <section className="form-section py-5 bg-light">
+      {/* MAIN ARTICLE */}
+      <section className="article-section py-5">
         <div className="container">
-          <h2 className="form-title text-center mb-5">Fill The Form For Khata Registration</h2>
-          <div className="row g-4">
-            {/* Form */}
-            <div className="col-md-8" data-aos="fade-right">
-              <form>
-                <div className="row mb-3">
-                  <div className="col">
-                    <label>First Name *</label>
-                    <input type="text" className="form-control" placeholder="First" required />
-                  </div>
-                  <div className="col">
-                    <label>Last Name</label>
-                    <input type="text" className="form-control" placeholder="Last" />
-                  </div>
-                </div>
-                <div className="row mb-3">
-                  <div className="col">
-                    <label>Email *</label>
-                    <input type="email" className="form-control" placeholder="Your Email" required />
-                  </div>
-                  <div className="col">
-                    <label>Phone Number *</label>
-                    <input type="tel" className="form-control" placeholder="+91 81234 56789" required />
-                  </div>
-                </div>
-                <div className="mb-3">
-                  <label>Address *</label>
-                  <input type="text" className="form-control" placeholder="Your Address" required />
-                </div>
-                <div className="row mb-3">
-                  <div className="col">
-                    <input type="text" className="form-control" placeholder="City" />
-                  </div>
-                  <div className="col">
-                    <input type="text" className="form-control" placeholder="Pincode" />
-                  </div>
-                </div>
-                <div className="row mb-3">
-                  <div className="col">
-                    <input type="text" className="form-control" placeholder="Ward Number / Name" />
-                  </div>
-                  <div className="col">
-                    <input type="date" className="form-control" placeholder="Order Date *" />
-                  </div>
-                </div>
-                <div className="mb-3">
-                  <label>Your Message *</label>
-                  <textarea className="form-control" rows="4" required placeholder="Your Message"></textarea>
-                </div>
-                <div className="mb-3">
-                  <label>Upload a File (Max 2MB)</label>
-                  <input type="file" className="form-control" />
-                </div>
-                <div className="mb-3 form-check">
-                  <input type="checkbox" className="form-check-input" id="terms" />
-                  <label className="form-check-label" htmlFor="terms">
-                    I agree to the Terms And Conditions & <a href="#">Privacy Policy</a>
-                  </label>
-                </div>
-                <button type="submit" className="btn btn-primary me-2">Submit</button>
-                <button type="reset" className="btn btn-secondary">Reset</button>
-              </form>
-            </div>
-
-            {/* Documents Box */}
-            <div className="col-md-4" data-aos="fade-left">
-              <div className="docs-box p-4 shadow-sm bg-white rounded">
-                <h5 className="docs-title mb-3 text-primary">📄 Documents Required For Khata Registration</h5>
-                <ul className="list-group list-group-flush mb-4">
-                  <li className="list-group-item">📝 <strong>Title Deed</strong></li>
-                  <li className="list-group-item">📜 <strong>Previous Deed</strong></li>
-                  <li className="list-group-item">💰 <strong>Tax Paid Receipt</strong></li>
-                  <li className="list-group-item">📆 <strong>E.C (Min. 5 years)</strong></li>
-                </ul>
-                <h5 className="docs-title mb-3 text-danger">⚠️ Documents That Vary By Case</h5>
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item">🔀 <strong>Partition Gift</strong></li>
-                  <li className="list-group-item">👪 <strong>Inheritance</strong></li>
-                  <li className="list-group-item">🏛️ <strong>Court Decree</strong></li>
-                </ul>
-              </div>
-            </div>
+          <div className="featured-img mb-4" data-aos="zoom-in">
+            <img
+              src="/images/bbmp services/KhataRegistration.jpeg"
+              alt="Coffee from around the world"
+              className="img-fluid rounded"
+            />
           </div>
+
+          <section className="khata-info-section">
+  <h2 className="khata-title" data-aos="fade-up">
+  Everything You Need to Know About Khata Registration
+  </h2>
+
+  <div className="khata-body">
+    <p data-aos="fade-up" data-aos-delay="200">
+      Khata is an essential legal document that signifies property ownership and is issued by municipal authorities
+      like BBMP, BMRDA, or Panchayat. It plays a crucial role during property sales, tax payments, and applying for utilities.
+    </p>
+
+    <p data-aos="fade-up" data-aos-delay="300">
+      It includes vital details like owner name, plot dimensions, location, property tax details, and a unique PID number.
+      A valid Khata ensures your land is officially recognized and ready for development or resale.
+    </p>
+
+    <blockquote className="khata-quote" data-aos="fade-up" data-aos-delay="400">
+      “A Khata is not just a document; it's proof that your property stands on legal ground.”
+    </blockquote>
+
+    <p data-aos="fade-up" data-aos-delay="500">
+      Always consult a legal expert before purchasing any plot. Ensure the property has a clear title, is free from encumbrances,
+      and has a valid Khata for a smooth registration process and future resale.
+    </p>
+  </div>
+</section>
+
+<section className="doc-section mt-5">
+  <div className="container" data-aos="fade-up">
+    <h2 className="section-heading text-center">Document Comparison – Aadhar vs Voter ID</h2>
+    <div className="custom-table-wrapper mt-4">
+      <table className="comparison-table">
+        <thead>
+          <tr>
+            <th>Aadhar Card</th>
+            <th>Voter ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>12-digit unique identity number</td>
+            <td>10-digit alphanumeric ID</td>
+          </tr>
+          <tr>
+            <td>Issued by UIDAI (Govt. of India)</td>
+            <td>Issued by Election Commission of India</td>
+          </tr>
+          <tr>
+            <td>Used for identity and address proof</td>
+            <td>Used primarily for voting eligibility</td>
+          </tr>
+          <tr>
+            <td>Mandatory for many government schemes</td>
+            <td>Mandatory for voting in elections</td>
+          </tr>
+          <tr>
+            <td>Can be downloaded digitally</td>
+            <td>Only available in physical format</td>
+          </tr>
+          <tr>
+            <td>Linked with biometric data</td>
+            <td>No biometric data linked</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section className="py-5 khata-section">
+  <div className="container">
+    <div className="p-4 rounded-4 shadow khata-box">
+      <h4 className="text-center fw-bold text-primary mb-4">📄 Contents of a Khata</h4>
+      <ul className="list-unstyled fs-5">
+        <li className="mb-3 d-flex align-items-start">
+          <i className="bi bi-person-fill me-2 text-dark"></i>
+          <span>Property owner’s name</span>
+        </li>
+        <li className="mb-3 d-flex align-items-start">
+          <i className="bi bi-aspect-ratio-fill me-2 text-dark"></i>
+          <span>Size of the property/measurement of the property</span>
+        </li>
+        <li className="mb-3 d-flex align-items-start">
+          <i className="bi bi-geo-alt-fill me-2 text-dark"></i>
+          <span>Location of the property</span>
+        </li>
+        <li className="mb-3 d-flex align-items-start">
+          <i className="bi bi-building me-2 text-dark"></i>
+          <span>Built-up area of the property</span>
+        </li>
+        <li className="mb-3 d-flex align-items-start">
+          <i className="bi bi-door-closed-fill me-2 text-dark"></i>
+          <span>Whether the property is vacant or occupied</span>
+        </li>
+        <li className="mb-3 d-flex align-items-start">
+          <i className="bi bi-tools me-2 text-dark"></i>
+          <span>Purpose of utilization of the property</span>
+        </li>
+        <li className="mb-3 d-flex align-items-start">
+          <i className="bi bi-cash-coin me-2 text-dark"></i>
+          <span>The annual value of the property</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
         </div>
       </section>
+
+      <Contact/>
     </>
   );
 };

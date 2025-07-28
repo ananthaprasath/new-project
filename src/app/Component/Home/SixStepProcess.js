@@ -1,77 +1,81 @@
 'use client';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
 const steps = [
   {
     number: 1,
     title: 'Order Online',
-    description: 'Book Any Documentation Services',
+    description: 'Book any documentation services online at your convenience.',
   },
   {
     number: 2,
     title: 'Review Documents',
-    description: 'We Will Review Your Documents In One Business Day',
+    description: 'Our experts review your documents within one business day.',
   },
   {
     number: 3,
     title: 'Order Estimation',
-    description: 'Our Executive Will Share You The Estimation',
+    description: 'Receive a detailed estimation from our executive.',
   },
   {
     number: 4,
     title: 'Payment',
-    description: 'Payment Can Be Made Online & Offline Mode',
+    description: 'Pay securely online or choose offline payment methods.',
   },
   {
     number: 5,
     title: 'Order Confirmation',
-    description: 'Your Order Received',
+    description: 'Get confirmation and status updates via email or SMS.',
   },
   {
     number: 6,
     title: 'Doorstep Delivery',
-    description: 'Your Documents At Your Door Step No Hassle No Worry',
+    description: 'We deliver the documents to your doorstep, hassle-free.',
   },
 ];
 
 const SixStepProcess = () => {
   return (
-    <div className="py-4" style={{ backgroundColor: '#f1f1f1' }}>
+    <section
+      className="py-5"
+      style={{
+        background:"rgb(241, 241, 241)",
+      }}
+    >
       <Container>
-        <h2 className="text-center mb-5 separator_off" style={{ fontWeight: 600 }}>
-          Docandeed Documentation Services Works In Simple 6 Steps
+        <h2 className="text-center fw-bold mb-5" style={{ color: '#0d1b7e' }}>
+          How Docandeed Works – 6 Easy Steps
         </h2>
-        <Row>
-          {steps.map((step, index) => (
-            <Col
-              key={index}
-              md={4}
-              className="d-flex flex-column align-items-center text-center mb-5"
-            >
-              <div
-                style={{
-                  width: '80px',
-                  height: '80px',
-                  background: 'radial-gradient(circle, #3a37e0 30%, #a3a6f5 60%, #e8e9fc 100%)',
-                  borderRadius: '50%',
-                  color: 'white',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '24px',
-                  fontWeight: 'bold',
-                  marginBottom: '20px',
-                }}
-              >
-                {step.number}
-              </div>
-              <h5 style={{ fontWeight: '600' }}>{step.title}</h5>
-              <p className="text-muted" style={{ maxWidth: '220px' }}>{step.description}</p>
+        <Row className="g-4">
+          {steps.map((step) => (
+            <Col key={step.number} md={6} lg={4}>
+              <Card className="h-100 text-center border-0 shadow-sm bg-white">
+                <Card.Body>
+                  <div
+                    className="rounded-circle text-white d-inline-flex justify-content-center align-items-center mb-3"
+                    style={{
+                      width: '50px',
+                      height: '50px',
+                      fontWeight: '600',
+                      background: 'linear-gradient(135deg,rgb(70, 221, 229), #6366f1)',
+                      boxShadow: '0 0 10px rgba(99, 102, 241, 0.3)',
+                    }}
+                  >
+                    {step.number}
+                  </div>
+                  <Card.Title className="fw-semibold text-dark">
+                    {step.title}
+                  </Card.Title>
+                  <Card.Text className="text-muted small">
+                    {step.description}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
             </Col>
           ))}
         </Row>
       </Container>
-    </div>
+    </section>
   );
 };
 

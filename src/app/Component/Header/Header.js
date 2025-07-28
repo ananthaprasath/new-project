@@ -1,13 +1,16 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Headertop from './Headertop';
 import './Header.css';
 import Link from 'next/link';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'animate.css';
 
 const Header = () => {
+  useEffect(() => {
+    import('bootstrap/dist/js/bootstrap.bundle.min.js');
+  }, []);
+
   const menuData = [
     {
       title: 'BBMP SERVICES',
@@ -51,6 +54,24 @@ const Header = () => {
       ]
     },
     {
+      title: 'AC&DC OFFICE',
+      subcategories: [
+        { label: 'Ac&dc Office', link: '/ac-office/ac&dc-office' },
+            ]
+    },
+    {
+      title: 'GRAM PANCHAYAT',
+      subcategories: [
+        { label: 'Gram Panchayat Khata Registration', link: '/gram-panchayat/khata-registration' },
+        { label: 'Gram Panchayat Khata Transfer', link: '/gram-panchayat/khata-transfer' },
+        { label: 'Gram Panchayat Khata Amalgamation', link: '/gram-panchayat/khata-amalgamation' },
+        { label: 'Gram Panchayat Khata Bifurcation', link: '/gram-panchayat/khata-befurcation' },
+        { label: 'Gram Panchayat Khata Extract & Certificate', link: '/gram-panchayat/khata-extract-certificate' },
+        { label: 'Gram Panchayat Building Plan Approval', link: '/gram-panchayat/building-plan-approval' },
+        { label: 'Gram Panchayat Tax Payments', link: '/gram-panchayat/tax-payments' }
+      ]
+    },
+    {
       title: 'AGREEMENTS & DRAFTS',
       subcategories: [
         { label: 'Rental Agreement', link: '/agreements/rental-agreement' },
@@ -60,18 +81,6 @@ const Header = () => {
         { label: 'Material Transfer Agreement', link: '/agreements/material-transfer-agreement' },
         { label: 'Vendor Agreement', link: '/agreements/vendor-agreement' },
         { label: 'Joint Development Agreement', link: '/agreements/joint-development-agreement' }
-      ]
-    },
-    {
-      title: 'GRAM PANCHAYAT',
-      subcategories: [
-        { label: 'Gram Panchayat Khata Registration', link: '/gram-panchayat/khata-registration' },
-        { label: 'Gram Panchayat Khata Transfer', link: '/gram-panchayat/khata-transfer' },
-        { label: 'Gram Panchayat Khata Amalgamation', link: '/gram-panchayat/khata-amalgamation' },
-        { label: 'Gram Panchayat Khata Bifurcation', link: '/gram-panchayat/khata-bifurcation' },
-        { label: 'Gram Panchayat Khata Extract & Certificate', link: '/gram-panchayat/khata-extract-certificate' },
-        { label: 'Gram Panchayat Building Plan Approval', link: '/gram-panchayat/building-plan-approval' },
-        { label: 'Gram Panchayat Tax Payments', link: '/gram-panchayat/tax-payments' }
       ]
     }
   ];
@@ -110,38 +119,44 @@ const Header = () => {
                 </Link>
               </li>
 
-              {menuData.map((menu, index) => (
-                <li key={index} className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle mx-2"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    {menu.title}
-                  </a>
-                  <ul className="dropdown-menu animate__animated animate__fadeIn shadow-sm">
-                    {menu.subcategories.map((sub, subIndex) => (
-                      <li key={subIndex}>
-                        <Link
-                          className="dropdown-item"
-                          href={sub.link}
-                          onClick={closeDropdown}
-                        >
-                          {sub.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-
-              <li className="nav-item">
-                <Link className="nav-link mx-2" href="/construction-services">
-                  CONSTRUCTION SERVICES
-                </Link>
-              </li>
+              {menuData.map((menu, index) =>
+                Array.isArray(menu.subcategories) ? (
+                  <li key={index} className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle mx-2"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      {menu.title}
+                    </a>
+                    <ul
+                      className={`dropdown-menu animate__animated animate__fadeIn shadow-sm ${
+                        menu.title === 'AGREEMENTS & DRAFTS' ? 'custom-dropdown-left' : ''
+                      }`}
+                    >
+                      {menu.subcategories.map((sub, subIndex) => (
+                        <li key={subIndex}>
+                          <Link
+                            className="dropdown-item"
+                            href={sub.link}
+                            onClick={closeDropdown}
+                          >
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                ) : (
+                  <li key={index} className="nav-item">
+                    <Link className="nav-link mx-2" href={menu.link}>
+                      {menu.title}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
         </div>

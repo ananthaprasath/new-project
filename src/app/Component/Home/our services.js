@@ -39,7 +39,7 @@ const OurServices = () => {
   return (
     <section className="py-5" style={{ backgroundColor:'#f1f1f1' }}>
       <div className="container text-center">
-        <h2 className="text-primary fw-bold">Our Services</h2>
+        <h2 className=" text fw-bold "style={{ color: '#0d1b7e' }}>Our Services</h2>
         <p className="mb-4">
           Premium & Affordable Documentation <br />
           <strong>Docandeed Services</strong>
@@ -56,7 +56,7 @@ const OurServices = () => {
                   height={80}
                   className="mx-auto mb-3"
                 />
-                <h5 className="fw-semibold text-primary">{service.title}</h5>
+                <h5 className="fw-semibold text-dark">{service.title}</h5>
                 <p>{service.description}</p>
                 <a href="#" className="btn btn-primary d-inline-flex align-items-center gap-2">
                   <FaExternalLinkAlt /> View Services
